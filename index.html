@@ -1,5 +1,9 @@
 <html>
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.45/vue.global.min.js"
+          integrity="sha512-Pdnl+dKWHA0jEnmhogUHlOw3FqDeujiEc3XQDkvMrPUAvytiU2cZiknw2xDPgDS+u2prg2n+6eKz3CPG588gTQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <h1>ww9rivers on GitHub</h1>
@@ -11,5 +15,17 @@
         <li><a href="js-games/game001.html">Tennis</a></li>
       </ul>
   </ol>
+  <div id="app">{{ message }}</div>
+  <script>
+  const { createApp } = Vue;
+
+  createApp({
+    data() {
+      return {
+        message: 'This site is built with Vue.JS!'
+      }
+    }
+  }).mount('#app');
+  </script>
 </body>
 </html>
