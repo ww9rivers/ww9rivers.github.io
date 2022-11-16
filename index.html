@@ -6,25 +6,30 @@
           referrerpolicy="no-referrer"></script>
 </head>
 <body>
-  <h1>ww9rivers on GitHub</h1>
-  <img src="https://illustrations.popsy.co/amber/paper-plane.svg" style="float:right; max-width:33%;" />
-  <p>A simple documentation of what I have on GitHub.
-  </p>
-  <ol>
-    <li>Game Programming in JavaScript</li>
-      <ul>
-        <li><a href="js-games/game001.html">Tennis</a></li>
-        <li><a href="js-games/sudoku.html">Sudoku</li>
-      </ul>
-  </ol>
-  <div id="app">{{ message }}</div>
+  <div id="app">
+    <h1>Welcome to ww9Rivers on GitHub</h1>
+    <img src="https://illustrations.popsy.co/amber/{{img}}.svg"
+         style="float:right; max-width:33%;"
+         alt="{{img}}" />
+    <p>A simple documentation of what I have on GitHub.
+    </p>
+    <ol>
+      <li>Game Programming in JavaScript</li>
+        <ul>
+          <li><a href="js-games/game001.html">Tennis</a></li>
+          <li><a href="js-games/sudoku.html">Sudoku</a></li>
+        </ul>
+    </ol>
+  </div>
+  
   <script>
   const { createApp } = Vue;
 
   createApp({
     data() {
+      const IMGS = ['paper-plane', 'woman-with-a-laptop', 'achievement', 'studying', 'genius' ];
       return {
-        message: 'This site is built with Vue.JS!'
+        img: IMGS[Math.floor(IMGS.length*Math.random())]
       }
     }
   }).mount('#app');
